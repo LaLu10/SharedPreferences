@@ -15,7 +15,7 @@ class AccesActivity : AppCompatActivity() {
         initUI()
     }
     fun initUI(){
-        binding.button.setOnClickListener {
+        binding.btnCerrarSesion.setOnClickListener {
             prefs.wipeData()
             onBackPressed()
         }
@@ -24,6 +24,7 @@ class AccesActivity : AppCompatActivity() {
         if (prefs.getColorCheck()){
             binding.constraintlayout.setBackgroundColor(
                 ContextCompat.getColor(this,R.color.purple_200))
+            binding.cardView.setCardBackgroundColor(ContextCompat.getColor(this,R.color.teal_700))
         }
     }
 }
